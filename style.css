@@ -1,0 +1,780 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+
+:root {
+  --header-height: 3rem;
+  /*========== Colors ==========*/
+  --primary-color: #069c54;
+  --primary-color-alt: #048654;
+  --bg__dark_primary: #181820;
+  --bg__dark_secondary: #201b21;
+  --text-color-dark: rgba(237, 236, 236, 0.7);
+  --text-pick-color: #fff;
+  --text-color-light: #a6a6a6;
+  --background-color: #fbfefd;
+  --border-dark-color: rgba(75, 75, 75, 0.7);
+  --hovering-text-color: ##ffffff;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes ==========*/
+  --mb-1: 0.5rem;
+  --mb-2: 1rem;
+  --mb-3: 1.5rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/*========== BASE ==========*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0%;
+  padding: 0%;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x:hidden; overflow-y: scroll;
+}
+
+/*Design layout schema*/
+
+.all___Content__container { 
+ display: grid;
+ grid-template-columns: 1fr 4fr;
+ width: 100%;
+ height: 100vh;
+ gap: 3rem;
+ background-color:red;
+}
+
+/*Side bar Container */
+
+.sideBarContainer {
+  width: 20%;
+  background-color: var(--bg__dark_primary);
+  color: var(--text-color-dark);
+  padding: 0rem 0rem 1rem 0rem;
+  height: 100vh;
+  position:fixed;
+}
+
+.imageContainer {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 0px 182px 188px;
+  padding: 4rem 0rem;
+  position: relative;
+}
+.imageContainer img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 5px solid var(--text-color-dark);
+  position: absolute;
+  /* left: 26.01%;
+right: 29.82%; */
+  top: 5.73%;
+  bottom: 76.95%;
+}
+.profileName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem;
+}
+.profileName p {
+  font-size: x-large;
+  font-weight: 900;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+.menu a {
+  color: var(--text-color-dark);
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-dark-color);
+}
+.menu a:hover {
+  background-color: var(--bg__dark_secondary);
+  color: var(--primary-color);
+}
+
+.menu a span {
+  margin-left: 1.5rem;
+}
+.socialMediaContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.socialMediaContainer .fa {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--text-color-dark);
+}
+.socialMediaContainer .fa:hover {
+  background-color: var(--text-color-dark);
+  border-radius: 50%;
+  color: var(--primary-color);
+  padding: 0.5rem;
+}
+
+/*HOME SECTION CSS
+===================================================
+===========================================================*/
+/*HOME Left Side Css Design*/
+.main___content {
+  width: 80%;
+  scroll-behavior: none;
+  padding-left: 2.5%;
+  margin-left: 22rem;
+  
+  background-color: var(--bg__dark_secondary);
+}
+.home--section .homePageContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.homeLeftContent {
+  padding: 8rem 0rem;
+  color: var(--text-pick-color);
+}
+.homeLeftContent .wellcomeNote {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  padding: 1rem 0rem;
+  font-weight: 700;
+}
+.homeLeftContent .authorName {
+  font-size: 2.5rem;
+  padding: 1rem 0rem;
+  font-weight: 900;
+}
+.homeLeftContent .whatIdo {
+  font-size: 1.5rem;
+}
+
+.homeLeftContent .homeContentDescreption p {
+  padding: 2rem 0rem;
+  font-size: 1.3rem;
+}
+
+/* CSS Button Design*/
+.button {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button::after,
+.button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all 0.4s;
+}
+
+.button::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  border-radius: 10px;
+}
+
+.button::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: var(--primary-color-alt);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+  border: 1px outset var(--text-color-dark);
+}
+
+.button:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+/*HOME Right Side Css Design*/
+.homeRightContainer .toggleChangeThem {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end;
+  /* width: 50px;
+    height: 50px; */
+}
+.homeRightContainer .toggleChangeThem .iconContainerMoon {
+  background-color: var(--text-color-light);
+  margin: 3rem 3rem 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -400px;
+}
+.homeRightContainer .backgroundImageContainer img {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 40px;
+  right: -60px;
+ 
+}
+/*ABOUT ME SECTION CSS
+===================================================
+===========================================================*/
+/*About Me Left Side Css Design*/
+.aboutMe--section{
+    color:var(--text-color-light);
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.aboutMeLeftSide{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+   
+}
+.aboutMeLeftSide img{
+    width: 220px;
+    height: 260px;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+#has-high-height{
+    width: 220px;
+    height: 300px;
+}
+.aboutMeLeftSide .secondPart{
+    margin-top: 2.5rem;
+}
+.aboutMeRightSide {
+    padding: 5% 5% 5% 0%;
+    
+}
+.headerContainer h1{
+    color:var(--text-pick-color);
+    font-size: var(--h1-font-size);
+    padding-bottom: 1rem;
+    margin-top: 2rem;
+}
+.headerContainer div{
+    height: 5px;
+    width: 25%;
+    background-color: var(--primary-color);
+    display:flex;
+    justify-content: end;
+    align-items: center;
+}
+.headerContainer div div{
+    height: 20px;
+    width: 20px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+.aboutMeRightSide .aboutMeSecondHeading{
+    margin-top: 2rem;
+    font-size: var(
+        --h2-font-size
+    );
+    font-weight:700 ;
+    padding-bottom: 1rem;
+    color: var(--text-pick-color);
+}
+.aboutMeRightSide .aboutMeContent{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.aboutMeRightSide .completedProjectContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+}
+.aboutMeRightSide .completedProjectContainer .cardContainer-completed{
+    display: flex;
+    grid-area:1rem;
+    gap:2rem;
+    justify-content: center;
+    align-items:center;
+    padding: 2rem 0rem;
+}
+.aboutMeRightSide .completedProjectContainer .cardContainer-completed .number{
+    font-size: var(--biggest-font-size);
+    font-weight: 900;
+    color:var(--text-pick-color);
+    display: inline-flexbox;
+}
+.aboutMeRightSide .completedProjectContainer .cardContainer-completed .value{
+    font-size: var(--h3-font-size);
+    color:var(--text-pick-color);
+}
+.buttonsContainer{
+    display: grid;
+    margin-top: 2rem;
+    grid-template-columns: 1fr 1fr;
+}
+/*ABOUT ME--SKILLS SECTION CSS
+===================================================
+===========================================================*/
+/*About Me SKILLS Left Side Css Design*/
+.aboutMe--section-skills{
+    padding: 2rem 0rem;
+}
+
+.skillsContentContainer{
+    padding: 2rem 0rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.dateAndTimeContainer{
+    background-color: var(--bg__dark_primary);
+    padding: 1rem 1rem ;
+    color:var(--text-pick-color);
+    border-bottom: 1px solid var(--text-color-light);
+}
+.dateAndTimeContainer .dateAndTime p{
+    background-color: var(--primary-color);
+    width: 100px;
+    padding: 0.5rem;
+    margin-left: -1.5rem;
+}
+.dateAndTimeContainer .dateAndTime div{
+width: 10px;
+background-color: var(--primary-color);
+height: 10px;
+margin-left: -1.5rem;
+border-radius: 0px 0px 200px 200px;
+margin-top:-7.5px ;
+
+}
+.dateContentHeader{
+    margin-top: 1rem;
+    font-size:large;
+}
+.skill--RightContentContainer{
+    padding: 2rem;
+  
+}
+.skill--RightContentContainer .header{
+    font-size: var(--h1-font-size);
+    color:var(--text-pick-color);
+    padding: 1rem 0rem;
+
+
+}
+.skill--RightContentContainer .skillsContent{
+    font-size: x-large;
+    color:var(--text-color-dark);
+}
+
+.progressContainer{
+    margin-top: 1rem;
+    color:var(--text-pick-color);
+}
+.progressContainer div{
+    background-color: var(--bg__dark_primary);
+    width: 300px;
+    height: 6px;
+    margin-top: 0.5rem;
+  
+}
+.progressContainer  #html5{
+    width: 250px;
+    height: 6px;
+    background-color:  var(--primary-color);
+}
+.progressContainer  #Wordpress{
+    width: 200px;
+    height: 6px;
+    background-color:  var(--primary-color);
+}
+
+.progressContainer  #Css{
+    width: 270px;
+    height: 6px;
+    background-color:  var(--primary-color);
+}
+
+.progressContainer  #JavaScript{
+    width: 200px;
+    height: 6px;
+    display: flex;
+    background-color:  var(--primary-color);
+}
+
+
+/*ABOUT ME--EDICATION SECTION CSS
+===================================================
+===========================================================*/
+/*About Me SKILLS Left Side Css Design*/
+.aboutMeEdicationContent{
+  background-color: var(--bg__dark_primary);
+  padding: 1rem;
+  color: var(--text-color-dark);
+  border-bottom: 1px solid var(--text-color-dark);
+
+}
+/* .aboutMeEdicationContent .leftAboutMeEdicationContainer{
+
+} */
+.leftAboutMeEdicationContainer img{
+  width: 300px;
+  height: 150px;
+}
+.aboutMeEdicationContent .card{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+ 
+}
+.divider{
+  content: ",,";
+  height: 0.5rem;
+  width: 3px;
+  margin: 0rem 0.4rem;
+  background-color: var(--text-color-dark);
+  color:var(--text-color-dark);
+}
+
+.rightSideAboutMeEdicationContainer{
+  padding: 0rem 1rem;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+
+}
+.rightSideAboutMeEdicationContainer .rightSideMainContent h1{
+color: var(--text-pick-color);
+margin-bottom: 0.5rem;
+}
+.rightSideAboutMeEdicationContainer .contentContainerApart1{
+  margin-bottom: 1rem;
+}
+.spanContainer{
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  margin-top: 1rem;
+
+}
+header{
+  margin-top: 1rem;
+}
+
+
+/* WHAT I DO CSS
+===================================================
+===========================================================*/
+/* Left Side Css Design*/
+.whatIDoContentContainer{
+color: var(--text-color-dark);
+}
+.RightcontentContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+.RightcontentContainer h1{
+  color: var(--text-pick-color);
+  padding-bottom: 1rem 0rem;
+  font-size:1.5rem;
+  padding-bottom: 1rem;
+}
+.contentContainer{
+  display:grid;
+  padding: 1rem 2rem;
+  grid-template-columns: 1fr 3fr;
+  margin: 1rem 1rem 1rem 0rem;
+  background-color: var(--bg__dark_primary);
+}
+
+.iconConatiner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.iconConatiner img{
+  width: 50px ;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/*TESTMONIAL CONTENT CSS
+===================================================
+===========================================================*/
+/*TESTMONIAL Left Side Css Design*/
+.testmonialContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  color: var(--text-color-dark);
+}
+.MyPortiforial--section-container{
+  margin-right: 2rem;
+}
+.leftTestmonialContent{
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  background-color:var(--bg__dark_primary);
+}
+.rightTesmonialConent{
+  margin-left: 1rem;
+  padding: 1rem;
+  background-color:var(--bg__dark_primary);
+}
+.leftTestmonialContent .imageTestMonialContainer img{
+  width: 200px;
+  height: 150px;
+}
+.testMonialContetContainer p, h4{
+  margin-bottom: 1rem;
+}
+.testMonialContetContainer h3{
+  color: var(--text-pick-color);
+}
+.whatIDo--Tesmony .controlButtons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+.whatIDo--Tesmony .navigation{
+
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border:1px solid var(--text-pick-color);
+}
+.whatIDo--Tesmony .controlButtons .firstTestmony{
+  background-color: var(--text-pick-color);
+}
+nav a{
+ 
+  text-decoration: none;
+  margin-right: 1rem;
+  color: var(--text-pick-color);
+}
+nav a:hover{
+  color: var(--primary-color);
+}
+#portfoliarNavigation{
+  margin: 1.5rem 0rem;
+
+}
+
+.portfoliaContentContainer .firstConternt .imagePortiforialContainer img{
+  width: 320px;
+  height: 340px;
+  margin-top: 2rem;
+}
+.portfoliaContentContainer{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.longLenht img{
+  height: 600px;;
+  margin-top: 2rem; 
+}
+
+/*LATEST BLOG CSS
+===================================================
+===========================================================*/
+/*LATEST BLOG Side Css Design*/
+
+.blog--content-container{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid:1rem;
+}
+.BlogContentContainer .imageBlogContainer img{
+  width: 450px;
+  height: 200px;
+  position: relative;
+}
+header{
+  margin: 10rem 0rem 3rem 0rem;
+}
+.BlogContentContainer .contentBlogContainer{
+  background-color: var(--bg__dark_primary);
+  color: var(--text-color-dark);
+  padding: 1rem ;
+  width: 386px;
+  margin-left: 4rem;
+  position: absolute;
+  margin-top: -130px;
+}
+.BlogContentContainer .contentBlogContainer .numberOfComent{
+  background-color: var(--primary-color);
+  padding: 0.3rem 0.5rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.BlogContentContainer .contentBlogContainer p{
+padding: 0.5rem;
+}
+.BlogContentContainer .contentBlogContainer .comment{
+  background-color: var(--bg__dark_secondary);
+  color: var(--text-pick-color);
+  padding: 0.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.blogContent{
+  font-size: 1.5rem;
+}
+.BlogContentContainer{
+  display: flex;
+  gap: 3rem;
+}
+.imageBlogContainer{
+  margin-bottom: 4rem;
+
+}
+.buttonBlogContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -100px;
+  margin-bottom: 10px;
+}
+.contact--container{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3rem;
+  color: var(--text-color-dark)
+}
+.headerContentArticle{
+  color: var(--text-pick-color);
+}
+.contact--container article, aside{
+  padding: 2rem;
+  background-color: var(--bg__dark_primary);
+}
+.firstContentContainer p{
+  padding: 1rem;
+  margin-bottom: 3rem;
+}
+.menuContent{
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.menuContent .iconContactContainer img{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+}
+.contact--container aside{
+  margin-right: 5rem;
+}
+
+.contact--container aside h1{
+  font-size: 2rem;
+  margin: 1rem 0rem;
+  color:var(--text-pick-color);
+}
+.contact--container aside form .basicAdress{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.contact--container aside form input,#textMessage{
+  padding: 0.8rem 0.5rem;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: var(--bg__dark_primary);
+  border: 1px solid gray;
+
+}
+.mapContainer{
+  margin-top: 6rem;
+}
+.mapContentContainer img{
+  width: 100%;
+ 
+}
