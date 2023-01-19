@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" href="https://boxicons.com/?query=circle"> -->
+  <title>To Do List</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" >
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <section>
+  <div class="title">
+    <h1 class="my-task">To Do a List</h1>
+    <form id="todo-form">
+      <input type="text" id="todo-input" class="form-control" placeholder="Add the task.."> &nbsp;&nbsp;
+      <button type="submit" class="btn" style="color:black; border: gray solid 2px; background-color:gray;">Add</button>
+    </form>
+  </div>
+  <ul id="todo-list"></ul>
+  <div>
+    <button type="submit" class="clear-done btn " style="color:black; border: gray solid 2px; background-color:gray;">Clear completed</button>
+    <button type="submit" class="clear-all  btn " style="color:black; border: gray solid 2px; background-color:gray;">Clear all</button>
+  </div>
+</section>
+  <script src="index.js"></script>
+</body>
+</html>

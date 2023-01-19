@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator app</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body><br><br>
+    <div class="container">
+      <form>
+        <input class="displayBox" type="text" id="displayBox" />
+      </form>
+      <button class="clearButton" onclick="handleClear()">Clear</button>
+      <br>
+      <button value="7"  id ="seven" class="squareButton" onClick="handleSeven()">7</button>
+      <button class="squareButton" onclick="handleEight()">8</button>
+      <button class="squareButton" onclick="handleNine()">9</button>
+      <button class="squareButton" onclick="handleDivision()">/</button>
+      <br>
+      <button class="squareButton" onclick="handleFour()">4</button>
+      <button class="squareButton" onclick="handleFive()">5</button>
+      <button class="squareButton" onclick="handleSix()">6</button>
+      <button class="squareButton" onclick="handleMultiplication()">X</button>
+      <br>
+      <button class="squareButton" onclick="handleOne()">1</button>
+      <button class="squareButton" onclick="handleTwo()">2</button>
+      <button class="squareButton" onclick="handleThree()">3</button>
+      <button class="squareButton" onclick="handleAddition()">+</button>
+      <br>
+      <button class="squareButton" onclick="handleZero()">0</button>
+      <button class="squareButton" onclick="handleDot()">.</button>
+      <button class="squareButton" onclick="handleEqual()">=</button>
+      <button class="squareButton" onclick="handleMinus()">-</button>
+    </div>
+  </body>
+  </html>
+  <script type = "text/javascript" src="index.js"></script>
