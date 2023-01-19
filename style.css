@@ -1,6 +1,10 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
+body{
+  background-color: #212122;
+}
+
 /*===== VARIABLES CSS =====*/
 
 :root {
@@ -768,6 +772,7 @@ padding: 0.5rem;
   margin-top: 1rem;
   background-color: var(--bg__dark_primary);
   border: 1px solid gray;
+  color: white;
 }
 .mapContainer{
   margin-top: 6rem;
